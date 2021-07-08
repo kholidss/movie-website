@@ -15,10 +15,10 @@
 
           
 
-            <div class="w-80 h-80 mt-8" v-for="(movie,index) in movies" :key="index">              
-                <img :src="movies.Poster" alt="Image" class="m-auto" width="190" :key="movie.id">
+            <div class="w-80 h-80 mt-8" v-for="(movie, index) in movies" :key="index">              
+                <img :src="movie.Poster" alt="Image" class="m-auto" width="190">
                 <div class="mt-1">
-                    <p class="text-center font-normal text-2xl">{{ movies.Title }}</p>
+                    <p class="text-center font-normal text-2xl">{{ movie.Title }}</p>
                 </div>
             </div>
 
@@ -51,8 +51,8 @@ export default {
     },
 
     async mounted() {
-        const response = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=e99d5d2f&t=peaky')
-        this.movies = response.data
+        const response = await axios.get('http://www.omdbapi.com/?apikey=e99d5d2f&s=batman')
+        this.movies = response.data.Search
     }
 
 }
