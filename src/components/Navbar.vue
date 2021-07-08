@@ -1,10 +1,10 @@
 <template>
-  <header class="flex justify-between align-center p-3">
+  <header class="flex justify-between align-center p-3 border-b-2">
     <router-link to="/">
       <h1 class="text-black-500 text-4xl">NORDIC ROSE</h1>
     </router-link>
 
-    <div class="flex mx-2 px-2">
+    <div class="flex pt-2">
 
         <router-link to="/blog" class="mx-5">
             <h1 class="text-black-500"><span><fa icon="search"/></span></h1>

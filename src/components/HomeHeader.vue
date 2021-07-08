@@ -1,8 +1,13 @@
 <template>
-  <div>
-      <img v-for="movie in movies" :key="movie.id">
-      <p>{{ movie.poster }}</p>
-      <p>{{ movie.title }}</p>
+  <div>   
+        <img :src="movie.Poster" alt="Image" class="m-auto">
+        <div class="mt-4">
+            <p class="text-center text-3xl font-medium">{{ movie.Title }}</p>
+            <p class="text-center text-3xl font-medium">{{ movie.Year }}</p>
+        </div>
+        <div>
+            <p class="text-center mt-5 leading-8">{{ movie.Plot }}</p>
+        </div>
   </div>
 </template>
 
@@ -18,7 +23,7 @@ export default {
     },
 
     async mounted() {
-        const response = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=e99d5d2f')
+        const response = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=e99d5d2f&t=peaky')
         this.movie = response.data
     }
 }
