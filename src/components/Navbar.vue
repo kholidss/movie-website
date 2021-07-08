@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between align-center">
+  <header class="flex justify-between align-center p-3">
     <router-link to="/">
       <h1 class="text-black-500 text-4xl">NORDIC ROSE</h1>
     </router-link>
