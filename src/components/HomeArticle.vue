@@ -12,15 +12,18 @@
                 </div>
                 {}
             </div> -->
-
+            <div v-for="(movie, index) in movies" :key="index">
+                <Card :image="movie.Poster" :title="movie.Title"/>
+            </div>
+            
           
 
-            <div class="w-80 h-80 mt-8" v-for="(movie, index) in movies" :key="index">              
+            <!-- <div class="w-80 h-80 mt-8" v-for="(movie, index) in movies" :key="index">              
                 <img :src="movie.Poster" alt="Image" class="m-auto" width="190">
                 <div class="mt-1">
                     <p class="text-center font-normal text-2xl">{{ movie.Title }}</p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="w-80 h-80 mt-8">               
                 <img :src="movie.Poster" alt="Image" class="m-auto" width="190">
@@ -43,7 +46,11 @@
 
 <script>
 import axios from 'axios'
+import Card from '@/components/Card.vue'
 export default {
+    components: {
+        Card
+    },
     data() {
         return {
             movies: [],

@@ -1,0 +1,27 @@
+[
+	{
+		"nama" : "Kholid Saifulloh",
+		"usia" : 22,
+		"alamat" : "Surabaya",
+		"hobby" : [
+			"Gitar",
+			"Game"
+		],
+		"karakter" : {
+			"baik" : "Rajin menabung",
+			"jahat" : "Malas"}
+	},
+
+	{
+		"nama" : "Joko Anwar",
+		"usia" : 45,
+		"alamat" : "Jakarta",
+		"hobby" : [
+			"Film",
+			"Mandi"
+		],
+		"karakter" : {
+			"baik" : "Pintar",
+			"jahat" : "Tidak ada"}
+	}
+]
